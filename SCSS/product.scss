@@ -1,0 +1,142 @@
+.products__section{
+    background-color: #F8FAF9;
+}
+.product{
+   
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    &__col{
+        width: 50%;
+    }
+    &__img-left{
+   
+    }
+    &__img{
+        margin-bottom: rem(23px);
+        position: relative;
+
+        &:hover .product__menu{
+            left: 91px;
+            opacity: 1;
+            transition: opacity 0.2s linear;
+        }
+
+    }
+    &__menu{
+        position: absolute;
+        width: 273px;
+        border-radius: 4px;
+        padding: 32px 22px;
+        top: 0;
+        left: 191px;
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+        
+    }
+    &__menu-item{
+        display: flex;
+        justify-content: space-between;
+        font-size: rem(16px);
+        line-height: rem(24px);
+        margin-bottom: 28px;
+        font-weight: 600;
+        color: #000;
+        position: relative;
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &:first-child .product__menu-name::before{
+            content: url("../img/produtc/1.svg");
+            position: absolute;
+            left: 0;
+            top: -4px;
+
+        }
+        &:nth-child(2) .product__menu-name::before{
+            content: url("../img/produtc/2.svg");
+            position: absolute;
+            left: 0;
+            top: -4px;
+
+        }
+        &:nth-child(3)  .product__menu-name::before{
+            content: url("../img/produtc/3.svg");
+            position: absolute;
+            left: 0;
+            top: -4px;
+
+        }
+        &:nth-child(4)  .product__menu-name::before{
+            content: url("../img/produtc/4.svg");
+            position: absolute;
+            left: 0;
+            top: -4px;
+
+        }
+        &:nth-child(5)  .product__menu-name::before{
+            content: url("../img/produtc/5.svg");
+            position: absolute;
+            left: 0;
+            top: -4px;
+
+        }
+        &:last-child .product__menu-name::before{
+            content: url("../img/produtc/6.svg");
+            position: absolute;
+            left: 0;
+            top: -4px;
+
+        }
+
+    }
+    &__menu-name{
+        padding-left: 44px;
+    }
+    &__title{
+        font-size: rem(36px);
+        line-height: rem(43px);
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #292929;
+    }
+    &__text{
+        font-size: rem(18px);
+        line-height: rem(22px);
+        margin: rem(23px) 0;
+        padding-right: 10%;
+    }
+    &-desc{
+        display: flex;
+        line-height: rem(22px);
+        margin-bottom: 24px;
+
+        &__item{
+            margin-right: rem(44px);
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+
+        &__item-bold{
+            font-weight: 700;
+            color: #000;
+        }
+    }
+    &__order{
+        display: flex;
+        align-items: center;
+    }
+    &__price{
+        font-size: rem(60px);
+        margin-right: rem(30px);
+        color: #151515;
+        font-weight: 300;
+    }
+}

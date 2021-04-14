@@ -1,0 +1,31 @@
+.header{
+    padding-top: rem(24px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__tel{
+        font-size: rem(22px);
+        line-height: rem(18px);
+        white-space: nowrap;
+        padding-top: 10px;
+
+        @include tablet{
+            display: none;
+        }
+    }
+    &__tel-icon{
+        width: 14px;
+        height: 14px;
+        fill: #fff;
+        margin-right: 5px;
+
+        @include tablet{
+            display: none;
+        }
+
+    }
+    &__contact{
+        padding-top: 10px;
+    }
+}
+

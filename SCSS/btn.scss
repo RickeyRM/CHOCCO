@@ -1,0 +1,25 @@
+.btn{
+    font-size: rem(16px);
+    line-height: rem(18px);
+    font-weight: 800;
+    padding: rem(21px) rem(41px);
+    border-radius: rem(100px);
+    text-transform: uppercase;
+}
+
+.product__btn{
+    background-color: #497870;
+    color: #fff;
+}
+
+.initial__btn{
+    background-color: #fff;
+    color: #365A49;
+    @include tablet{
+        text-align: center;
+    }
+
+    @include mobile{
+        font-size: rem(19px);
+    }
+}
