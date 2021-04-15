@@ -23,3 +23,17 @@
         font-size: rem(19px);
     }
 }
+.products__arrow-left{
+    background-color: inherit;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+    left: -50px;
+}
+.products__arrow-right{
+    background-color: inherit;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+    right: -10px;
+}

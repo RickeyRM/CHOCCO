@@ -142,67 +142,133 @@
         <section class="products__section section">
             <div class="container">
                 <div class="products__section-arrows">
-                    <button class="products__arrow-left"></button>
-                    <button class="products__arrow-right"></button>
-                    <ul class="product">
-                        <li class="product__item">
-                            <div class="product__container">
-                                <div class="product__col">
-                                    <img class="product__img-left" src="./img/produtc/product.png" alt="">
-                                </div>
-                                <div class="product__col">
-                                    <div class="product__img">
-                                        <img src="./img/produtc/click.svg" alt="">
-                                        <ul class="product__menu">
-                                            <li class="product__menu-item">
-                                                <span class="product__menu-name">Виноград</span>
-                                                <span class="product__menu-desc">25 г</span>
-                                            </li>
-                                            <li class="product__menu-item">
-                                                <span class="product__menu-name">Грецкий орех</span>
-                                                <span class="product__menu-desc">32 г</span>
-                                            </li>
-                                            <li class="product__menu-item">
-                                                <span class="product__menu-name">Кунжутное семя</span>
-                                                <span class="product__menu-desc">20 г</span>
-                                            </li>
-                                            <li class="product__menu-item">
-                                                <span class="product__menu-name">Сухое молоко</span>
-                                                <span class="product__menu-desc">10 г</span>
-                                            </li>
-                                            <li class="product__menu-item">
-                                                <span class="product__menu-name">Зам. сахара</span>
-                                                <span class="product__menu-desc">4 г</span>
-                                            </li>
-                                            <li class="product__menu-item">
-                                                <span class="product__menu-name">Какао бобы</span>
-                                                <span class="product__menu-desc">4 г</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__title">Батончик “Гранола виноград”</div>
-                                    <div class="product__text">
-                                        <p>
-                                            Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
-                                        </p>
-                                    </div>
-                                    <div class="product-desc">
-                                        <span class="product-desc__item">Калорийность 
-                                            <div class="product-desc__item-bold">110 ккал</div>
-                                        </span>
-                                        <span class="product-desc__item">Вес 
-                                            <div class="product-desc__item-bold">95 грамм</div>
-                                        </span>
-                                    </div>
-                                    <div class="product__order">
-                                        <div class="product__price">140 ₽</div>
-                                        <button class="product__btn btn">Заказать</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <button class="products__arrow-left">
+                        <svg width="15" height="29" viewBox="0 0 15 29" fill="none">
+                            <use xlink:href="./img/sprite.svg#left"></use>
+                        </svg>
+                    </button>
+                    <button class="products__arrow-right">
+                        <svg width="15" height="29" viewBox="0 0 15 29" fill="none">
+                            <use xlink:href="./img/sprite.svg#right"></use>
+                        </svg>
+                    </button>
                 </div>
+                <ul class="product">
+                    <li class="product__item">
+                        <div class="product__col">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="./img/produtc/p-m.png">
+                                <img class="product__img-left" src="./img/produtc/p.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="product__col">
+                            <div class="product__img">
+                                <img src="./img/produtc/click.svg" alt="">
+                                <ul class="product__menu">
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Виноград</span>
+                                        <span class="product__menu-desc">25 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Грецкий орех</span>
+                                        <span class="product__menu-desc">32 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Кунжутное семя</span>
+                                        <span class="product__menu-desc">20 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Сухое молоко</span>
+                                        <span class="product__menu-desc">10 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Зам. сахара</span>
+                                        <span class="product__menu-desc">4 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Какао бобы</span>
+                                        <span class="product__menu-desc">4 г</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product__title">Батончик “Гранола виноград”</div>
+                            <div class="product__text">
+                                <p>
+                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                </p>
+                            </div>
+                            <div class="product-desc">
+                                <span class="product-desc__item">Калорийность 
+                                    <div class="product-desc__item-bold">110 ккал</div>
+                                </span>
+                                <span class="product-desc__item">Вес 
+                                    <div class="product-desc__item-bold">95 грамм</div>
+                                </span>
+                            </div>
+                            <div class="product__order">
+                                <div class="product__price">140 ₽</div>
+                                <a class="product__btn btn" href="#">Заказать</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li class="product__item">
+                        <div class="product__col">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="./img/produtc/p-m.png">
+                                <img class="product__img-left" src="./img/produtc/p.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="product__col">
+                            <div class="product__img">
+                                <img src="./img/produtc/click.svg" alt="">
+                                <ul class="product__menu">
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Виноград</span>
+                                        <span class="product__menu-desc">25 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Грецкий орех</span>
+                                        <span class="product__menu-desc">32 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Кунжутное семя</span>
+                                        <span class="product__menu-desc">20 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Сухое молоко</span>
+                                        <span class="product__menu-desc">10 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Зам. сахара</span>
+                                        <span class="product__menu-desc">4 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name">Какао бобы</span>
+                                        <span class="product__menu-desc">4 г</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="product__title">Батончик “Гранола виноград”</div>
+                            <div class="product__text">
+                                <p>
+                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                </p>
+                            </div>
+                            <div class="product-desc">
+                                <span class="product-desc__item">Калорийность 
+                                    <div class="product-desc__item-bold">110 ккал</div>
+                                </span>
+                                <span class="product-desc__item">Вес 
+                                    <div class="product-desc__item-bold">95 грамм</div>
+                                </span>
+                            </div>
+                            <div class="product__order">
+                                <div class="product__price">140 ₽</div>
+                                <a class="product__btn btn" href="#">Заказать</a>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
             </div>
         </section>
         <section class="reviews__section section">
