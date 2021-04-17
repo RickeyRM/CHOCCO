@@ -2,12 +2,34 @@
     background-color: #F8FAF9;
     position: relative;
 
-    &::after{
+    &::before{
         content: url("../img/produtc/list-bg.png");
         position: absolute;
         right: 0;
-        bottom: -150px;
+        bottom: rem(-150px);
+
+        @include tablet{
+            content: url("../img/produtc/list-bg-m.png");
+        }
+
     }
+    &::after{
+        content: url("../img/produtc/berry.png");
+        position: absolute;
+        right: 1%;
+        bottom: -80px;
+
+        @include tablet{
+            content: url("../img/produtc/berry-m.png");
+            bottom: 0;
+        }
+        @include mobile{
+            content: url("../img/produtc/berry-m.png");
+            bottom: -30px;
+            right: -10px;
+        }
+    }
+
 }
 .product{
     display: flex;
@@ -25,21 +47,31 @@
 
     }
     &__col{
-        width: 49%;
+        max-width: 50%;
 
         @include tablet{
             margin: 0 auto;
-            width: 70%;
+            max-width: 100%;
         }
     }
-    &__img-left{
-        margin-left: -100px;
+    &__col-img{
+        display: flex;
+        justify-content: center;
+
     }
-    &__img{
+    &__img-left{
+        max-width: 100%;
+
+        @include tablet{
+            padding-right: rem(50px);
+        }
+
+    }
+    &__menu{
         margin-bottom: rem(23px);
         position: relative;
 
-        &:hover .product__menu{
+        &:hover .product__menu-list{
             left: 91px;
             opacity: 1;
             transition: opacity 0.2s linear;
@@ -50,7 +82,7 @@
         }
 
     }
-    &__menu{
+    &__menu-list{
         position: absolute;
         width: 273px;
         border-radius: 4px;
@@ -126,6 +158,11 @@
         text-transform: uppercase;
         font-weight: 700;
         color: #292929;
+
+        @include mobile{
+            padding: 0 12%;
+        }
+
     }
     &__text{
         font-size: rem(18px);
@@ -135,6 +172,10 @@
 
         @include tablet{
             padding-right: 0;
+        }
+        @include mobile{
+            padding: 0 6%;
+            font-size: rem(21px);
         }
 
     }

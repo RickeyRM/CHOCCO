@@ -1,9 +1,9 @@
 .btn{
-    font-size: rem(16px);
-    line-height: rem(18px);
+    font-size: 16px;
+    line-height: 18px;
     font-weight: 800;
-    padding: rem(21px) rem(41px);
-    border-radius: rem(100px);
+    padding: 21px 41px;
+    border-radius: 100px;
     text-transform: uppercase;
 }
 
@@ -28,12 +28,33 @@
     position: absolute;
     top: 55%;
     transform: translateY(-55%);
-    left: -50px;
+    right: 99%;
+
+    @include tablet{
+        top: 30%;
+        transform: translateY(-30%);
+        right: 79%;
+    }
+
+    @include mobile{
+        right: 95%;
+    }
+
 }
 .products__arrow-right{
     background-color: inherit;
     position: absolute;
     top: 55%;
     transform: translateY(-55%);
-    right: -10px;
+    left: 99%;
+
+    @include tablet{
+        top: 30%;
+        transform: translateY(-30%);
+        left: 79%;
+    }
+
+    @include mobile{
+        left: 95%;
+    }
 }
