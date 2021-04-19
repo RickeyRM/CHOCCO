@@ -117,12 +117,19 @@ console.log(filterArray(mixedArray, isEven));
     menuBtn.addEventListener('click', function () {
         menu.classList.toggle('menu--active');
         menuBtn.classList.toggle('active');
+
+        if (menu.classList.contains('menu--active')){
+            document.body.style.overflow = `hidden`;
+        } else {
+            document.body.style.overflow = `scroll`;
+        }
     });
 
     menu.addEventListener('click', function (e) {
         if (menu.classList.contains('menu--active') && e.target.classList.contains('menu__item-link')){
             menu.classList.toggle('menu--active');
-            menuBtn.classList.toggle('active')
+            menuBtn.classList.toggle('active');
+            document.body.style.overflow = `scroll`;
         }
     })
 

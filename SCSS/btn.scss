@@ -36,11 +36,11 @@
     @include tablet{
         top: 30%;
         transform: translateY(-30%);
-        right: 79%;
+        right: 85%;
     }
 
     @include mobile{
-        right: 95%;
+        right: 93%;
     }
 }
 .arrow--right{
@@ -49,11 +49,11 @@
     @include tablet{
         top: 30%;
         transform: translateY(-30%);
-        left: 79%;
+        left: 85%;
     }
 
     @include mobile{
-        left: 95%;
+        left: 93%;
     }
 }
 

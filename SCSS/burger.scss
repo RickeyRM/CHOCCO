@@ -3,12 +3,11 @@
     padding: 15px 0;
     position: absolute;
     top: 25px;
-    right: 2%;
+    right: 0;
     z-index: 1;
     background-color: inherit;
     cursor: pointer;
     display: none;
-    position: fixed;
 
     .active &__line{
         background-color: inherit;
