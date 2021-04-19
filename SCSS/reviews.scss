@@ -1,4 +1,4 @@
-.reviews__section{
+.reviews{
     background: url(../img/reviews/berry.png) right 5% top 5% no-repeat;
     position: relative;
 
@@ -27,11 +27,6 @@
           content: url("../img/reviews/berry-2-mobile.png");
      }
     }
-
-    
-}
-
-.reviews{
 
    &__display{
        background: url(../img/reviews/list.png) right 10% no-repeat;

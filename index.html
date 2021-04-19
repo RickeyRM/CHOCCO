@@ -23,25 +23,25 @@
                     <nav class="menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="#">О нас</a>
+                                <a class="menu__item-link" href="#">О нас</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#">Батончики</a>
+                                <a class="menu__item-link" href="#product">Батончики</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#">Команда</a>
+                                <a class="menu__item-link" href="#">Команда</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#">Меню</a>
+                                <a class="menu__item-link" href="#">Меню</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#">Отзывы</a>
+                                <a class="menu__item-link" href="#">Отзывы</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#">Как мы работаем</a>
+                                <a class="menu__item-link" href="#">Как мы работаем</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#">Контакты</a>
+                                <a class="menu__item-link" href="#">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -52,9 +52,7 @@
                             </svg>
                             8 800 903 90 90</a>
                     </div>
-                    <button class="burger">
-                        <span class="burger__line"></span>
-                        <span class="burger__line"></span>
+                    <button class="burger" type="button">
                         <span class="burger__line"></span>
                     </button>
                 </header>
@@ -93,7 +91,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages__section section">
+        <section class="advantages section">
             <div class="container">
                 <div class="headline">
                     <h2 class="title headline__title">почему chocco?</h2>
@@ -101,7 +99,7 @@
                         В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые удобно взять с собой.
                     </div>
                 </div>
-                <ul class="advantages">
+                <ul class="advantages__list">
                     <li class="advantages__item">
                         <div class="advantages__item-img"></div>
                         <div class="advantages__item-content">
@@ -139,22 +137,22 @@
                 </ul>
             </div>
         </section>
-        <section class="products__section section">
-            <div class="container">
-                <div class="products__section-arrows">
-                    <button class="products__arrow-left">
+        <section class="product section" id="product">
+            <div class="container product__container">
+                <div class="product__arrows">
+                    <button class="product__arrow arrow--left" id="product__arrow-left">
                         <svg width="15" height="29" viewBox="0 0 15 29" fill="none">
                             <use xlink:href="./img/sprite.svg#left"></use>
                         </svg>
                     </button>
-                    <button class="products__arrow-right">
+                    <button class="product__arrow arrow--right" id="product__arrow-right">
                         <svg width="15" height="29" viewBox="0 0 15 29" fill="none">
                             <use xlink:href="./img/sprite.svg#right"></use>
                         </svg>
                     </button>
                 </div>
-                <ul class="product">
-                    <li class="product__item">
+                <ul class="product__list" id="product">
+                    <li class="product__item" id="product__item">
                         <div class="product__col">
                             <picture class="product__col-img">
                                 <source media="(max-width: 768px)" srcset="./img/produtc/p-m.png">
@@ -213,17 +211,19 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li class="product__item">
+                    <li class="product__item" id="product__item">
                         <div class="product__col">
-                            <picture>
+                            <picture class="product__col-img">
                                 <source media="(max-width: 768px)" srcset="./img/produtc/p-m.png">
                                 <img class="product__img-left" src="./img/produtc/p.png" alt="">
                             </picture>
                         </div>
                         <div class="product__col">
-                            <div class="product__img">
-                                <img src="./img/produtc/click.svg" alt="">
-                                <ul class="product__menu">
+                            <div class="product__menu">
+                                <svg  width="91" height="91" viewBox="0 0 91 91">
+                                    <use xlink:href="./img/sprite.svg#menu"></use>
+                                </svg>
+                                <ul class="product__menu-list">
                                     <li class="product__menu-item">
                                         <span class="product__menu-name">Виноград</span>
                                         <span class="product__menu-desc">25 г</span>
@@ -269,14 +269,14 @@
                                 <a class="product__btn btn" href="#">Заказать</a>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </section>
-        <section class="reviews__section section">
+        <section class="reviews section section">
             <div class="container">
                 <h2 class="title">Отзывы</h2>
-                <div class="reviews">
+                <div class="reviews__inner">
                     <div class="reviews__display">
                         <div class="reviews__display-inner">
                             <div class="reviews__avatar">
@@ -315,7 +315,7 @@
                 </div> 
             </div>
         </section>
-        <section class="delivery__section section">
+        <section class="delivery section">
             <div class="container">
                 <h2 class="title delivery__title">закажите доставку</h2>
                 <form class="form">
@@ -421,5 +421,25 @@
             </li>
         </ul>
     </nav>
+    <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="simpe-slider-container">
+        <button class="arrow" id="left" type="button">(----</button>
+        <div class="slider">
+            <ul class="items" id="items">
+                <li class="item">1</li>
+                <li class="item">2</li>
+                <li class="item">3</li>
+                <li class="item">4</li>
+                <li class="item">5</li>
+                <li class="item">6</li>
+                <li class="item">7</li>
+                <li class="item">8</li>
+                <li class="item">9</li>
+            </ul>
+        </div>
+        <button class="arrow" id="right" type="button">----)</button>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+    <script src="./JS/app.js"></script>
 </body>
 </html>

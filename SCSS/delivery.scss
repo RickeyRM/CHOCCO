@@ -1,4 +1,4 @@
-.delivery__section{
+.delivery{
     background: url(../img/delivery/berry.png) left 5% bottom 10% no-repeat,
     url(../img/delivery/list.png) right 5% bottom 5% no-repeat,
     url(../img/delivery/delivery-fon.png) center center no-repeat;
@@ -20,7 +20,7 @@
             top: rem(-120px);
        }
     }
-}
-.delivery__title{
-    color: #365A49;
+    &__title{
+        color: #365A49;
+    }
 }

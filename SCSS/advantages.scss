@@ -1,4 +1,4 @@
-.advantages__section{
+.advantages{
     background: url(../img/advantages/adv-list.png) left 50% no-repeat;
     position: relative;
 
@@ -21,15 +21,14 @@
         }
 
     }
-}
+    &__list{
+        display: flex;
+        text-align: center;
 
-.advantages{
-    display: flex;
-    text-align: center;
-
-    @include mobile{
-        display: block;
-        text-align: left;
+        @include mobile{
+            display: block;
+            text-align: left;
+        }
     }
 
     &__item{
