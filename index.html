@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/slick.css">
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/main.css">
     <title>CHOCCO</title>
@@ -145,7 +146,7 @@
                             <use xlink:href="./img/sprite.svg#left"></use>
                         </svg>
                     </button>
-                    <button class="product__arrow arrow--right" id="product__arrow-right">
+                    <button class="product__arrow arrow--right" type="button">
                         <svg width="15" height="29" viewBox="0 0 15 29" fill="none">
                             <use xlink:href="./img/sprite.svg#right"></use>
                         </svg>
@@ -211,11 +212,11 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li class="product__item" id="product__item">
+                    <li class="product__item" id="product__item">
                         <div class="product__col">
                             <picture class="product__col-img">
-                                <source media="(max-width: 768px)" srcset="./img/produtc/p-m.png">
-                                <img class="product__img-left" src="./img/produtc/p.png" alt="">
+                                <source media="(max-width: 480px)" srcset="./img/produtc/product-2-m.png">
+                                <img class="product__img-left" src="./img/produtc/product-2.png" alt="">
                             </picture>
                         </div>
                         <div class="product__col">
@@ -225,20 +226,24 @@
                                 </svg>
                                 <ul class="product__menu-list">
                                     <li class="product__menu-item">
-                                        <span class="product__menu-name">Виноград</span>
+                                        <span class="product__menu-name oat">Овёс</span>
                                         <span class="product__menu-desc">25 г</span>
                                     </li>
                                     <li class="product__menu-item">
-                                        <span class="product__menu-name">Грецкий орех</span>
-                                        <span class="product__menu-desc">32 г</span>
+                                        <span class="product__menu-name seaweed">Мор. водоросли</span>
+                                        <span class="product__menu-desc">15 г</span>
                                     </li>
                                     <li class="product__menu-item">
-                                        <span class="product__menu-name">Кунжутное семя</span>
+                                        <span class="product__menu-name">Миндаль</span>
                                         <span class="product__menu-desc">20 г</span>
                                     </li>
                                     <li class="product__menu-item">
                                         <span class="product__menu-name">Сухое молоко</span>
                                         <span class="product__menu-desc">10 г</span>
+                                    </li>
+                                    <li class="product__menu-item">
+                                        <span class="product__menu-name seeds">Тыкв. семечки</span>
+                                        <span class="product__menu-desc">20 г</span>
                                     </li>
                                     <li class="product__menu-item">
                                         <span class="product__menu-name">Зам. сахара</span>
@@ -250,18 +255,18 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="product__title">Батончик “Гранола виноград”</div>
+                            <div class="product__title">Батончик “Морские водоросли”</div>
                             <div class="product__text">
                                 <p>
-                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                    Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
                                 </p>
                             </div>
                             <div class="product-desc">
                                 <span class="product-desc__item">Калорийность 
-                                    <div class="product-desc__item-bold">110 ккал</div>
+                                    <div class="product-desc__item-bold">120 ккал</div>
                                 </span>
                                 <span class="product-desc__item">Вес 
-                                    <div class="product-desc__item-bold">95 грамм</div>
+                                    <div class="product-desc__item-bold">98 грамм</div>
                                 </span>
                             </div>
                             <div class="product__order">
@@ -269,7 +274,78 @@
                                 <a class="product__btn btn" href="#">Заказать</a>
                             </div>
                         </div>
-                    </li> -->
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="team section">
+            <div class="container">
+                <h2 class="title">Команда</h2>
+                <ul class="team__inner">
+                    <li class="team__item">
+                        <div class="team__img">
+                            <img src="./img/team/team1.jpg" alt="">
+                        </div>
+                        <div class="team__content">
+                            <span class="team__name">Борис Федорович</span>
+                            <div class="team__post">
+                                <div class="team__post-name">Главный технолог</div>
+                                <div class="team__post-text">
+                                    <p>
+                                        Отвечает за вкусовые качества и калорийность.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team__item">
+                        <div class="team__img">
+                            <img src="./img/team/team2.jpg" alt="">
+                        </div>
+                        <div class="team__content">
+                            <span class="team__name">Алла Иванова</span>
+                            <div class="team__post">
+                                <div class="team__post-name">Специалист по купаковке</div>
+                                <div class="team__post-text">
+                                    <p>
+                                        Автор запоминающегося стиля наших батончиков.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team__item">
+                        <div class="team__img">
+                            <img src="./img/team/team3.jpg" alt="">
+                        </div>
+                        <div class="team__content">
+                            <span class="team__name">Кирилл Матросов</span>
+                            <div class="team__post">
+                                <div class="team__post-name">Оператор</div>
+                                <div class="team__post-text">
+                                    <p>
+                                        С радостью поможет подобрать батончики и оформить заказ. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="team__item">
+                        <div class="team__img">
+                            <img src="./img/team/team4.jpg" alt="">
+                        </div>
+                        <div class="team__content">
+                            <span class="team__name">Мила Рыжкова</span>
+                            <div class="team__post">
+                                <div class="team__post-name">PR, маркетинг</div>
+                                <div class="team__post-text">
+                                    <p>
+                                        По всем вопросам сотрудничества и рекламы писать только Миле. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -440,6 +516,8 @@
         <button class="arrow" id="right" type="button">----)</button>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/slick.min.js"></script>
     <script src="./JS/app.js"></script>
 </body>
 </html>

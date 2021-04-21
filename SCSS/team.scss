@@ -1,0 +1,64 @@
+.team{
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+    &__item{
+        text-align: center;
+        max-width: rem(220px);
+        margin-right: rem(10px);
+        width: 100%;
+        position: relative;
+        
+        &:last-child{
+            margin-right: 0;
+        }
+
+    }
+    &__img img{
+        max-width: rem(220px);
+        width: 100%;
+    }
+    &__content{
+        margin-top: rem(22px);
+        color: #292929;
+    }
+    &__name{
+        font-size: rem(21px);
+        line-height: rem(25px);
+        font-weight: 700;
+        position: relative;
+        &::after{
+            content: url("../img/team/Polygon.png");
+            position: absolute;
+            top: -4px;
+            right: -14px;
+        }
+        
+    }
+    &__name.active{
+        color: red;
+    }
+    &__post{
+        margin-top: 8px;
+        display: none;
+        z-index: 1;
+    }
+    &__post-name{
+        font-size: rem(18px);
+        line-height: rem(22px);
+    }
+    &__post-text{
+        margin-top: 4px;
+        font-size: rem(18px);
+        line-height: rem(22px);
+        font-weight: 300;
+        color: #666;
+    }
+}
