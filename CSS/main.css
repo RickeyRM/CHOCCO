@@ -79,6 +79,14 @@ html {
   width: 53px;
   height: 39px; }
 
+.modal {
+  display: none; }
+  .modal__container {
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff; }
+
 .btn {
   font-size: 16px;
   line-height: 18px;
@@ -110,23 +118,23 @@ html {
   z-index: 1; }
 
 .arrow--left {
-  right: 100%; }
+  right: 98%; }
   @media screen and (max-width: 768px) {
     .arrow--left {
-      top: 30%;
-      transform: translateY(-30%);
-      right: 85%; } }
+      top: 55%;
+      transform: translateY(-55%);
+      right: 95%; } }
   @media screen and (max-width: 480px) {
     .arrow--left {
       right: 93%; } }
 
 .arrow--right {
-  left: 100%; }
+  left: 98%; }
   @media screen and (max-width: 768px) {
     .arrow--right {
-      top: 30%;
-      transform: translateY(-30%);
-      left: 85%; } }
+      top: 55%;
+      transform: translateY(-55%);
+      left: 95%; } }
   @media screen and (max-width: 480px) {
     .arrow--right {
       left: 93%; } }
@@ -353,38 +361,58 @@ html {
       flex-direction: column;
       align-items: center; } }
 .team__item {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  max-width: 12.2222222222rem;
   margin-right: 0.5555555556rem;
-  width: 100%;
+  width: 23%;
+  height: 100%;
   position: relative; }
   .team__item:last-child {
     margin-right: 0; }
+.team__img {
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .team__img {
+      order: 1; } }
 .team__img img {
   max-width: 12.2222222222rem;
-  width: 100%; }
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 1.2222222222rem; }
 .team__content {
-  margin-top: 1.2222222222rem;
-  color: #292929; }
+  margin-top: 8px;
+  overflow: hidden;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  transition: height 0.1s linear; }
+  .team__content.active {
+    height: 100%; }
 .team__name {
+  color: #292929;
   font-size: 1.1666666667rem;
   line-height: 1.3888888889rem;
   font-weight: 700;
-  position: relative; }
+  position: relative;
+  margin: 0 auto;
+  background-color: inherit; }
   .team__name::after {
     content: url("../img/team/Polygon.png");
     position: absolute;
-    top: -4px;
+    top: -2px;
     right: -14px; }
-.team__name.active {
-  color: red; }
-.team__post {
-  margin-top: 8px;
-  display: none;
-  z-index: 1; }
+  .team__name.active::after {
+    content: url("../img/team/Polygon.png");
+    position: absolute;
+    top: 4px;
+    right: -14px;
+    transform: rotate(180deg); }
 .team__post-name {
   font-size: 1rem;
-  line-height: 1.2222222222rem; }
+  line-height: 1.2222222222rem;
+  font-weight: 700;
+  color: #000; }
 .team__post-text {
   margin-top: 4px;
   font-size: 1rem;
@@ -395,12 +423,15 @@ html {
 .interactive-avatar {
   width: 4.3333333333rem;
   height: 4.3333333333rem;
-  border: 0.2222222222rem solid inherit;
+  border: 0.2222222222rem solid transparent;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  box-sizing: initial; }
+  .interactive-avatar:hover {
+    border: 0.2222222222rem solid #365A49; }
   .interactive-avatar__img {
     width: 100%; }
-  .interactive-avatar--active {
+  .interactive-avatar.active {
     border: 0.2222222222rem solid #365A49; }
 
 .radio {
@@ -903,9 +934,11 @@ html {
       transform: translateX(-50%);
       top: -3.6111111111rem; }
   .reviews__display-inner {
-    display: flex;
     align-items: center;
-    padding: 2.3333333333rem 7.8888888889rem 2.3333333333rem 2.3333333333rem; }
+    padding: 2.3333333333rem 7.8888888889rem 2.3333333333rem 2.3333333333rem;
+    display: none; }
+    .reviews__display-inner.active {
+      display: flex; }
     @media screen and (max-width: 768px) {
       .reviews__display-inner {
         display: block;
@@ -946,6 +979,9 @@ html {
     margin-right: 0.3333333333rem; }
     .reviews__switcher-item:last-child {
       margin-right: 0; }
+
+#display__inner-2 {
+  display: flex; }
 
 .delivery {
   background: url(../img/delivery/berry.png) left 5% bottom 10% no-repeat, url(../img/delivery/list.png) right 5% bottom 5% no-repeat, url(../img/delivery/delivery-fon.png) center center no-repeat;

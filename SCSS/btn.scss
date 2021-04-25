@@ -32,12 +32,12 @@
     z-index: 1;
 }
 .arrow--left{
-    right: 100%;
+    right: 98%;
 
     @include tablet{
-        top: 30%;
-        transform: translateY(-30%);
-        right: 85%;
+        top: 55%;
+        transform: translateY(-55%);
+        right: 95%;
     }
 
     @include mobile{
@@ -45,12 +45,12 @@
     }
 }
 .arrow--right{
-    left: 100%;
+    left: 98%;
 
     @include tablet{
-        top: 30%;
-        transform: translateY(-30%);
-        left: 85%;
+        top: 55%;
+        transform: translateY(-55%);
+        left: 95%;
     }
 
     @include mobile{

@@ -47,9 +47,13 @@
         }
    }
    &__display-inner{
-        display: flex;
         align-items: center;
         padding: rem(42px) rem(142px) rem(42px) rem(42px);
+        display: none;
+          &.active{
+               display: flex;
+          }
+
 
      @include tablet{
           display: block;
@@ -103,4 +107,7 @@
              margin-right: 0;
         }
    }
+}
+#display__inner-2{
+     display: flex;
 }

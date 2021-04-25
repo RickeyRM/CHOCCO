@@ -31,6 +31,7 @@
             right: -10px;
         }
     }
+
     &__list{
         transition: transform 0.5s ease-out;
     }
@@ -67,6 +68,7 @@
         }
     }
     &__img-left{
+        
         @include mobile{
             max-width: 100%;
         }

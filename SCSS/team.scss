@@ -10,10 +10,12 @@
 
     }
     &__item{
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        max-width: rem(220px);
         margin-right: rem(10px);
-        width: 100%;
+        width: 23%;
+        height: 100%;
         position: relative;
         
         &:last-child{
@@ -21,38 +23,58 @@
         }
 
     }
+    &__img{
+        overflow: hidden;
+        @include tablet{
+            order: 1;
+        }
+    }
     &__img img{
         max-width: rem(220px);
         width: 100%;
+        object-fit: contain;
+        margin-bottom: rem(22px);
     }
     &__content{
-        margin-top: rem(22px);
-        color: #292929;
+        margin-top: 8px;
+        overflow: hidden;
+        height: 0;
+        position: absolute;
+        top: 100%;
+        transition: height 0.1s linear;
+        &.active{
+            height: 100%;
+        }
     }
     &__name{
+        color: #292929;
         font-size: rem(21px);
         line-height: rem(25px);
         font-weight: 700;
         position: relative;
+        margin: 0 auto;
+        background-color: inherit;
         &::after{
             content: url("../img/team/Polygon.png");
             position: absolute;
-            top: -4px;
+            top: -2px;
             right: -14px;
         }
-        
-    }
-    &__name.active{
-        color: red;
-    }
-    &__post{
-        margin-top: 8px;
-        display: none;
-        z-index: 1;
+        &.active{
+            &::after{
+                content: url("../img/team/Polygon.png");
+                position: absolute;
+                top: 4px;
+                right: -14px;
+                transform: rotate(180deg);
+            }
+        }
     }
     &__post-name{
         font-size: rem(18px);
         line-height: rem(22px);
+        font-weight: 700;
+        color: #000;
     }
     &__post-text{
         margin-top: 4px;

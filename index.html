@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/slick.css">
+    <link rel="stylesheet" href="CSS/jquery.fancybox.min.css">
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/main.css">
     <title>CHOCCO</title>
@@ -286,9 +287,9 @@
                         <div class="team__img">
                             <img src="./img/team/team1.jpg" alt="">
                         </div>
+                        <button class="team__name">Борис Федорович</button>
                         <div class="team__content">
-                            <span class="team__name">Борис Федорович</span>
-                            <div class="team__post">
+                            <div class="team__content-block">
                                 <div class="team__post-name">Главный технолог</div>
                                 <div class="team__post-text">
                                     <p>
@@ -302,9 +303,9 @@
                         <div class="team__img">
                             <img src="./img/team/team2.jpg" alt="">
                         </div>
+                        <button class="team__name">Алла Иванова</button>
                         <div class="team__content">
-                            <span class="team__name">Алла Иванова</span>
-                            <div class="team__post">
+                            <div class="team__content-block">
                                 <div class="team__post-name">Специалист по купаковке</div>
                                 <div class="team__post-text">
                                     <p>
@@ -318,9 +319,9 @@
                         <div class="team__img">
                             <img src="./img/team/team3.jpg" alt="">
                         </div>
+                        <button class="team__name">Кирилл Матросов</button>
                         <div class="team__content">
-                            <span class="team__name">Кирилл Матросов</span>
-                            <div class="team__post">
+                            <div class="team__content-block">
                                 <div class="team__post-name">Оператор</div>
                                 <div class="team__post-text">
                                     <p>
@@ -334,9 +335,9 @@
                         <div class="team__img">
                             <img src="./img/team/team4.jpg" alt="">
                         </div>
+                        <button class="team__name">Мила Рыжкова</button>
                         <div class="team__content">
-                            <span class="team__name">Мила Рыжкова</span>
-                            <div class="team__post">
+                            <div class="team__content-block">
                                 <div class="team__post-name">PR, маркетинг</div>
                                 <div class="team__post-text">
                                     <p>
@@ -354,7 +355,7 @@
                 <h2 class="title">Отзывы</h2>
                 <div class="reviews__inner">
                     <div class="reviews__display">
-                        <div class="reviews__display-inner">
+                        <div class="reviews__display-inner active" data-item="one">
                             <div class="reviews__avatar">
                                 <img class="reviews__avatar-img" src="./img/reviews/comment-1.jpg" alt="avatar">
                             </div>
@@ -370,20 +371,53 @@
                                 <div class="reviews__name">Алёна Хмельницкая</div>
                             </article>
                         </div>
+                        <div class="reviews__display-inner" data-item="two">
+                            <div class="reviews__avatar">
+                                <img class="reviews__avatar-img" src="./img/reviews/comment-2.jpg" alt="avatar">
+                            </div>
+                            <article class="reviews__content">
+                                <h3 class="reviews__title">Идеально подходят для спортсменов</h3>
+                                <div class="reviews__text">
+                                    <p>
+                                        После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать.
+                                        А кушать хочется. Протеиновые батончики всегда выручают в этом плане.
+                                        Спасибо производителю за этот качественный и экологичный продbutton  
+                                    </p>
+                                </div>
+                                <div class="reviews__name">Вадим Грачев </div>
+                            </article>
+                        </div>
+                        <div class="reviews__display-inner" data-item="three">
+                            <div class="reviews__avatar">
+                                <img class="reviews__avatar-img" src="./img/reviews/comment-3.jpg" alt="avatar">
+                            </div>
+                            <article class="reviews__content">
+                                <h3 class="reviews__title">Лучшие батончики премиум уровня</h3>
+                                <div class="reviews__text">
+                                    <p>
+                                        Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако,
+                                        как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке.
+                                        Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго.
+                                        Через час уже ем ещё один. Но это скорее плюс, чем минус. 
+                                    </p>
+                                </div>
+                                <div class="reviews__name">Мария Орлова</div>
+                            </article>
+                        </div>
                     </div>
                     <ul class="reviews__switcher">
-                        <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
-                            <button class="interactive-avatar__link">
+                        <li class="reviews__switcher-item interactive-avatar active">
+                            <button class="interactive-avatar__link" data-open="one">
                                 <img class="interactive-avatar__img" src="./img/reviews/comment-1.jpg" alt="avatar">
                             </button>
                         </li>
                         <li class="reviews__switcher-item interactive-avatar">
-                            <button class="interactive-avatar__link">
+                            <button class="interactive-avatar__link" data-open="two">
                                 <img class="interactive-avatar__img" src="./img/reviews/comment-2.jpg" alt="avatar">
                             </button>
                         </li>
                         <li class="reviews__switcher-item interactive-avatar">
-                            <button class="interactive-avatar__link">
+                            <button class="interactive-avatar__link" data-open="three">
                                 <img class="interactive-avatar__img" src="./img/reviews/comment-3.jpg" alt="avatar">
                             </button>
                         </li>
@@ -399,35 +433,36 @@
                         <div class="form__row">
                             <label class="form__block">
                                 <span class="form__title">Имя</span>
-                                <input class="form__input" type="text">
+                                <input class="form__input" type="text" name="name" required>
+                                <div></div>
                             </label>
                             <label class="form__block">
                                 <span class="form__title">Телефон</span>
-                                <input class="form__input" type="number">
+                                <input class="form__input" type="number" name="tel" required>
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <span class="form__title">Улица</span>
-                                <input class="form__input" type="text">
+                                <input class="form__input" type="text" name="street" required>
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <span class="form__title">Дом</span>
-                                <input class="form__input" type="number">
+                                <input class="form__input" type="number" name="house" required>
                             </label>
                             <label class="form__block">
                                 <span class="form__title">Корпус</span>
-                                <input class="form__input" type="text">
+                                <input class="form__input" type="text" name="corpus">
                             </label>
                             <label class="form__block">
                                 <span class="form__title">Квартира</span>
-                                <input class="form__input" type="number">
+                                <input class="form__input" type="number" name="flat" required>
                             </label>
                             <label class="form__block">
                                 <span class="form__title">Этаж</span>
-                                <input class="form__input" type="number">
+                                <input class="form__input" type="number" name="floor">
                             </label>
                         </div>
                     </div>  
@@ -435,7 +470,7 @@
                         <div class="form__row">
                             <label class="form__block">
                                 <span class="form__title">Комментарий</sspan>
-                                <textarea class="form__input form__input--textarea"></textarea>
+                                <textarea class="form__input form__input--textarea" name="comment"></textarea>
                             </label>
                         </div>
                         <div class="form__controls">
@@ -452,7 +487,7 @@
                         </div>
                         <div class="form__controls">
                             <label class="radio radio--checkbox">
-                                <input class="radio__element" type="checkbox">
+                                <input class="radio__element" type="checkbox" name="don't-call">
                                 <span class="radio__visible"></span>
                                 <span class="radio__title">Не перезванивать</span>
                             </label>
@@ -497,6 +532,19 @@
             </li>
         </ul>
     </nav>
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <div class="modal__title">АЛО</div>
+            <div class="modal__text">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
+                    incidunt natus, voluptatibus ad distinctio ab molestias aperiam possimus
+                    laborum fugiat iste dolores fuga veritatis doloremque esse dolorum sint vero minima?
+                </p>
+            </div>
+            <a href="#" class="button">БИБИП</a>
+        </div>
+    </div>
     <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="simpe-slider-container">
         <button class="arrow" id="left" type="button">(----</button>
@@ -517,7 +565,12 @@
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
     <script src="./JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/jquery.fancybox.min.js"></script>
     <script src="./JS/slick.min.js"></script>
+    <script src="./JS/slider.js"></script>
+    <script src="./JS/interactive.js"></script>
+    <script src="./JS/menu.js"></script>
+    <script src="./JS/team.js"></script>
     <script src="./JS/app.js"></script>
 </body>
 </html>
