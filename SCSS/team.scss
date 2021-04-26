@@ -4,10 +4,17 @@
         justify-content: space-between;
         
         @include tablet {
+            display: none;
+        }
+
+    }
+    &__inner--mobile{
+        display: none;
+        @include tablet {
+            display: flex;
             flex-direction: column;
             align-items: center;
         }
-
     }
     &__item{
         display: flex;
@@ -20,6 +27,10 @@
         
         &:last-child{
             margin-right: 0;
+        }
+        @include tablet{
+            width: 100%;
+            padding: 0 20%;
         }
 
     }
@@ -44,6 +55,9 @@
         transition: height 0.1s linear;
         &.active{
             height: 100%;
+        }
+        @include tablet{
+            position: initial;
         }
     }
     &__name{

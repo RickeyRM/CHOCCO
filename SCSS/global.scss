@@ -9,12 +9,13 @@ html{
         font-size: 14px;
     }
 }
-.wrapper{
+body{
     font-family: 'Alegreya Sans', sans-serif;
     color: #666;
 }
 .container{
-    max-width: 962px;
+    max-width: 1032px;
+    padding: 0 40px;
     width: 96%;
     margin: 0 auto;
     position: relative;

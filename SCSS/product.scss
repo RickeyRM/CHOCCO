@@ -10,6 +10,9 @@
 
         @include tablet{
             content: url("../img/produtc/list-bg-m.png");
+            position: absolute;
+            right: -60px;
+            bottom: -160px;
         }
 
     }
@@ -28,7 +31,7 @@
         @include mobile{
             content: url("../img/produtc/berry-m.png");
             bottom: -30px;
-            right: -10px;
+            right: 4px;
         }
     }
 
@@ -193,7 +196,7 @@
         color: #292929;
 
         @include mobile{
-            padding: 0 12%;
+            padding: 0 6%;
         }
 
     }

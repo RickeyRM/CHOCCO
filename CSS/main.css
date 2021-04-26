@@ -65,12 +65,13 @@ html {
     html {
       font-size: 14px; } }
 
-.wrapper {
+body {
   font-family: 'Alegreya Sans', sans-serif;
   color: #666; }
 
 .container {
-  max-width: 962px;
+  max-width: 1032px;
+  padding: 0 40px;
   width: 96%;
   margin: 0 auto;
   position: relative; }
@@ -78,14 +79,6 @@ html {
 .logo {
   width: 53px;
   height: 39px; }
-
-.modal {
-  display: none; }
-  .modal__container {
-    width: 600px;
-    height: 500px;
-    margin: 0 auto;
-    background-color: #fff; }
 
 .btn {
   font-size: 16px;
@@ -358,6 +351,12 @@ html {
   justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .team__inner {
+      display: none; } }
+.team__inner--mobile {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .team__inner--mobile {
+      display: flex;
       flex-direction: column;
       align-items: center; } }
 .team__item {
@@ -370,6 +369,10 @@ html {
   position: relative; }
   .team__item:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .team__item {
+      width: 100%;
+      padding: 0 20%; } }
 .team__img {
   overflow: hidden; }
   @media screen and (max-width: 768px) {
@@ -389,6 +392,9 @@ html {
   transition: height 0.1s linear; }
   .team__content.active {
     height: 100%; }
+  @media screen and (max-width: 768px) {
+    .team__content {
+      position: initial; } }
 .team__name {
   color: #292929;
   font-size: 1.1666666667rem;
@@ -512,6 +518,8 @@ html {
     border-radius: 0.2222222222rem; }
     .form__input:focus {
       border: 0.1666666667rem solid #DEE2BD; }
+    .form__input.false {
+      border: 0.1666666667rem solid #f7b8b8; }
   .form__input--textarea {
     resize: none;
     width: 100%;
@@ -550,7 +558,7 @@ html {
   .fixed-menu__item {
     margin-bottom: 0.2777777778rem; }
     .fixed-menu__item--active .fixed-menu__link {
-      border: 0.0555555556rem solid #fff; }
+      border: 0.0555555556rem solid gray; }
   .fixed-menu__link {
     width: 1.1111111111rem;
     height: 1.1111111111rem;
@@ -565,7 +573,7 @@ html {
       border-radius: 50%;
       display: block;
       position: absolute;
-      background-color: #fff;
+      background-color: gray;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
@@ -622,7 +630,10 @@ html {
     bottom: -8.3333333333rem; }
     @media screen and (max-width: 768px) {
       .product::before {
-        content: url("../img/produtc/list-bg-m.png"); } }
+        content: url("../img/produtc/list-bg-m.png");
+        position: absolute;
+        right: -60px;
+        bottom: -160px; } }
   .product::after {
     content: url("../img/produtc/berry.png");
     position: absolute;
@@ -636,7 +647,7 @@ html {
       .product::after {
         content: url("../img/produtc/berry-m.png");
         bottom: -30px;
-        right: -10px; } }
+        right: 4px; } }
   .product__list {
     transition: transform 0.5s ease-out; }
   .product__item {
@@ -750,7 +761,7 @@ html {
     color: #292929; }
     @media screen and (max-width: 480px) {
       .product__title {
-        padding: 0 12%; } }
+        padding: 0 6%; } }
   .product__text {
     font-size: 1rem;
     line-height: 1.2222222222rem;
@@ -900,12 +911,13 @@ html {
   position: relative; }
   @media screen and (max-width: 768px) {
     .reviews {
-      background-position: right -5% top 5%; } }
+      background-position: right -5% top 0; } }
   .reviews::before {
     position: absolute;
     content: url("../img/reviews/list-2.png");
     left: 0;
-    bottom: -8.3333333333rem; }
+    bottom: -8.3333333333rem;
+    z-index: 1; }
     @media screen and (max-width: 480px) {
       .reviews::before {
         content: url("../img/reviews/list-2-mobile.png"); } }
@@ -913,10 +925,12 @@ html {
     position: absolute;
     content: url("../img/reviews/berry-2.png");
     left: 0;
-    bottom: -4.4444444444rem; }
+    bottom: -4.4444444444rem;
+    z-index: 1; }
     @media screen and (max-width: 480px) {
       .reviews::after {
-        content: url("../img/reviews/berry-2-mobile.png"); } }
+        content: url("../img/reviews/berry-2-mobile.png");
+        bottom: -6.1111111111rem; } }
   .reviews__display {
     background: url(../img/reviews/list.png) right 10% no-repeat;
     background-color: #F8FAF9;
@@ -933,17 +947,19 @@ html {
       left: 50%;
       transform: translateX(-50%);
       top: -3.6111111111rem; }
-  .reviews__display-inner {
+  .reviews__display-box {
     align-items: center;
-    padding: 2.3333333333rem 7.8888888889rem 2.3333333333rem 2.3333333333rem;
-    display: none; }
-    .reviews__display-inner.active {
-      display: flex; }
+    display: flex;
+    padding: 2.3333333333rem 7.8888888889rem 2.3333333333rem 2.3333333333rem; }
     @media screen and (max-width: 768px) {
-      .reviews__display-inner {
+      .reviews__display-box {
         display: block;
         text-align: center;
         padding: 3.1111111111rem 1.3333333333rem 1.3333333333rem; } }
+  .reviews__display-inner {
+    display: none; }
+    .reviews__display-inner.active {
+      display: block; }
   .reviews__avatar {
     margin-right: 2.2222222222rem;
     width: 14.0555555556rem;
@@ -1001,5 +1017,19 @@ html {
         top: -6.6666666667rem; } }
   .delivery__title {
     color: #365A49; }
+
+.modal {
+  display: none;
+  text-align: center; }
+  .modal__container {
+    color: #000;
+    margin: 0 auto;
+    background-color: #fff; }
+  .modal__title {
+    font-size: 40px;
+    margin-bottom: 15px; }
+  .modal__text {
+    font-size: 24px;
+    margin-bottom: 20px; }
 
 /*# sourceMappingURL=main.css.map */

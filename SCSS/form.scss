@@ -51,6 +51,9 @@
         &:focus{
             border: rem(3px) solid #DEE2BD;
         }
+        &.false{
+            border: rem(3px) solid rgb(247, 184, 184);
+        }
     }
     &__input--textarea{
         resize: none;
