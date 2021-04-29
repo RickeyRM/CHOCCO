@@ -27,20 +27,23 @@ $(document).ready(function () {
                 name: myForm.elements.name.value,
                 phone: myForm.elements.phone.value,
                 comment: myForm.elements.comment.value,
-                to: myForm.elements.to.value,  
+                to: 'test@mail.ru' 
             };
 
             console.log(data);
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
             xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+            xhr.setRequestHeader('content-type', 'application/json');
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load', () =>{
-                // if(xhr.response.status){
-                //     console.log('ok');
-                // } else{
-                //     console.log('ne ok');
-                // }
+                if(xhr.response.status){
+                    $('.modal__title').text(xhr.response.message)
+                    console.log('ok');
+                } else{
+                    $('.modal__title').text(xhr.response.message)
+                    console.log('ne ok');
+                }
             });
         }
     });
@@ -80,10 +83,8 @@ $(document).ready(function () {
             $.fancybox.close();
         });
         if(!checked.checkValidity()){
-           $('.modal__title').text('Данные не отправлены').next().text('Заполните поля');
             return false;
         } else {
-            $('.modal__title').text('Данные отправлены').next().text('');
             return true;
         }
     }

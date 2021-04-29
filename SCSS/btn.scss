@@ -60,33 +60,3 @@
 
 
 
-.simpe-slider-container{
-    width: 1200px;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-}
-.slider{
-    margin: 0 15px;
-    overflow: hidden;
-}
-.items{
-    width: 240px;
-    display: flex;
-    margin: 0 auto;
-    position: relative;
-    right: 0;
-    transition: right 0.5s ease-in-out;
-}
-.item{
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-shrink: 0;
-    flex-grow: 0;
-    align-items: center;
-    justify-content: center;
-    background-color: coral;
-    border: 1px solid black;
-}
