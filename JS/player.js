@@ -2,46 +2,91 @@ let player;
 
 const playerContainer = $('.player__start');
 
+let playerWidth = $('.player').width();
+let playerHeight = $('.player').height();
+
 let eventInit = () =>{
     $('.player__start').click(e =>{
         e.preventDefault();
 
         const btn = $(e.currentTarget);
         if(playerContainer.hasClass('paused')){
-            playerContainer.removeClass('paused');
             player.pauseVideo();
         } else {
-            playerContainer.addClass('paused');
             player.playVideo();
         }
     });
-}
+
+    $('.player__playback').click(e =>{
+        const bar = $(e.currentTarget);
+        const clickedPosition = e.originalEvent.layerX;
+        const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+
+        const newButtonPosition = (player.getDuration() / 100) * newButtonPositionPercent;
+
+        $('.player__playback-button').css('left', `${newButtonPositionPercent}%`);
+
+        player.seekTo(newButtonPosition);
+    });
+};
 
 const formatTime = timeSec =>{
     const roundTime = Math.round(timeSec);
 
-    const minutes = Math.floor(roundTime / 60);
-    const seconds = roundTime - minutes * 60;
+    const minutes = addZero(Math.floor(roundTime / 60));
+    const seconds = addZero(roundTime - minutes * 60);
+
+    function addZero(num){
+        return num < 10 ? `0${num}` : num;
+    }
 
     return `${minutes}:${seconds}`;
 };
 
 const onPlayerReady = () =>{
-
+    let interval;
     const durationSec = player.getDuration();
 
     $('.player__duration-estimate').text(formatTime(durationSec));
 
+    if(typeof interval !== 'undefined'){
+        clearInterval(interval);
+    };
+
+    interval = setInterval(() =>{
+        const complededSec = player.getCurrentTime();
+        
+        const complededPercent = (complededSec / durationSec) * 100;
+
+        $('.player__playback-button').css('left', `${complededPercent}%`)
+
+        $('.player__duration-completed').text(formatTime(complededSec));
+    }, 1000);
 }
+
+const onPlayerStateChange = (e) =>{
+
+switch(e.data){
+    case 1:
+        playerContainer.addClass('paused');
+        playerContainer.addClass('active');
+        break;
+    case 2:
+        playerContainer.removeClass('active');
+        playerContainer.removeClass('paused');
+        break;
+}
+
+};
 
 function onYouTubeIframeAPIReady() {
  player = new YT.Player("yt-player", {
-   height: "372",
-   width: "661",
+   height: playerHeight,
+   width: playerWidth,
    videoId: "LXb3EKWsInQ",
    events: {
         onReady: onPlayerReady,
-     // onStateChange: onPlayerStateChange
+        onStateChange: onPlayerStateChange
    },
    playerVars: {
        controls: 0,

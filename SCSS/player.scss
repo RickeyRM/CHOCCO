@@ -1,8 +1,25 @@
 .player{
-    max-width: 661px;
+    max-width: 662px;
     width: 100%;
-    height: 372px;
+    height: 376px;
     position: relative;
+    margin: 0 auto;
+    z-index: 1;
+
+    @include tablet {
+        max-width: 586px;
+        height: 348px;
+    }
+    @include mobile {
+        max-width: 394px;
+        height: 222px;
+    }
+    &__container{
+        background: url(../img/player/bg.jpg) center center contain no-repeat;
+        &.active{
+            background: none;
+        }
+    }
     &__controls{
         height: 34px;
         display: flex;
@@ -13,14 +30,17 @@
         bottom: -34px;
         left: 0;
         right: 0; 
-        padding: 0 15px;  
+        padding: 0 15px; 
+        @include tablet {
+            padding: 0 10px;
+        }
     }
     &__start{
         background-color: inherit;
         &::after{
             content: url("../img/player/Vector.svg");
             display: block;
-            padding-top: 3px;
+            padding-top: 6px;
         }
         &.paused{
             background-color: inherit;
@@ -51,6 +71,7 @@
         background-color: #626262;
         border-radius: 4px;
         position: relative;
+        margin: 0 6px;
 
         &-button{
             width: 15px;
@@ -63,5 +84,8 @@
             top: 50%;
             transform: translateY(-50%);
         }
+    }
+    &__duration{
+        white-space: nowrap;
     }
 }

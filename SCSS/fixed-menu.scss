@@ -16,7 +16,7 @@
         margin-bottom: rem(5px);
         &--active{
             .fixed-menu__link{
-                border: rem(1px) solid gray;
+                border: rem(1px) solid #fff;
             }
         }
     }
@@ -34,10 +34,24 @@
             border-radius: 50%;
             display: block;
             position: absolute;
-            background-color: gray;
+            background-color: #fff;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+    }
+    &.fixed-menu--shadowed{
+        .fixed-menu__item{
+            &--active{
+                .fixed-menu__link{
+                    border: rem(1px) solid #292929;
+                }
+            }
+        }
+        .fixed-menu__link{
+            &::before{
+                background-color: #292929;
+            }
         }
     }
 }

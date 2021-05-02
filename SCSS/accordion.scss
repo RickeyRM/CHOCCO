@@ -5,19 +5,23 @@
         height: 100%;
         display: flex;
         align-items: flex-start;
-        justify-content: flex-end;
+        justify-content: space-between;
     }
     &__slide-title-container{
-        width: 50%;
+        max-width: 20%;
         height: 100%;
     }
     &__slide-title{
         margin-top: 110px;
         margin-left: 84px;
         color: #fff;
+        @include mobile {
+            margin-top: rem(75px);
+            margin-left: rem(20px);
+        }
     }
     &__slide-tabs{
-        width: 50%;
+        max-width: 70%;
         height: 100%;
         display: flex;
         align-items: flex-end;
@@ -33,11 +37,14 @@
         height: 100%;
     }
     &__item{
-        position: relative;
         min-width: 102px;
         height: 100%;
         cursor: pointer;
         display: flex;
+
+        @include mobile {
+            min-width: rem(90px);
+        }
 
         &-one{
             background: url(../img/accordion/item-bg-1.jpg) center center / cover no-repeat;
@@ -52,30 +59,36 @@
             background: url(../img/accordion/item-bg-3.jpg) center center / cover no-repeat;
         }
         &-name{
-            position: relative;
-            min-width: 80px;
+            min-width: 102px;
             height: 100%;
-            
+            display: flex;
+            padding-bottom: 40px;
+            @include mobile {
+                min-width: rem(90px);
+            }
         }
         &-title{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            line-height: 80px;
-            transform: rotateZ(-90deg);
-            font-size: 36px;
+            white-space: nowrap;
             color: #fff;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            margin: 0;
+            line-height: 96px;
+            text-align: left;
+            text-transform: inherit;
+            @include mobile{
+                line-height: rem(96px); 
+            }
         }
         &-desc{
             background: rgba(51, 53, 55, 0.9);
-            max-width: 0;
-            opacity: 0;
+            width: 0;
             visibility: hidden;
             transition: all 0.5s ease-in-out;
             &.active{
-                max-width: 524;
-                opacity: 1;
+                width: 524px;
                 visibility: visible;
+                padding: 30px 80px 0 20px;
             }
         }
     }

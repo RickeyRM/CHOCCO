@@ -15,11 +15,14 @@ body{
 }
 .container{
     max-width: 962px;
-    width: 100%;
+    width: 97%;
     margin: 0 auto;
     position: relative;
 }
 .logo{
     width: 53px;
     height: 39px;
+}
+.wrapper{
+    transition: transform 0.5s ease-in-out;
 }

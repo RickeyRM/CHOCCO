@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="initial section">
+        <section class="initial section" data-fixedMenu-color="white">
             <div class="initial__container container">
                 <header class="header">
                     <a class="logo" href="#">
@@ -48,8 +48,8 @@
                         </ul>
                     </nav>
                     <div class="header__contact">
-                        <a class="tel header__tel" href="tel:88009039090">
-                            <svg class="header__tel-icon">
+                        <a class="tel" href="tel:88009039090">
+                            <svg class="tel-icon">
                                 <use xlink:href="./img/sprite.svg#phone"></use>
                             </svg>
                             8 800 903 90 90</a>
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <section class="advantages section">
+        <section class="advantages section" data-fixedMenu-color="black">
             <div class="container">
                 <div class="headline">
                     <h2 class="title headline__title">почему chocco?</h2>
@@ -139,7 +139,7 @@
                 </ul>
             </div>
         </section>
-        <section class="product section" id="product">
+        <section class="product section" id="product" data-fixedMenu-color="black">
             <div class="container product__container">
                 <div class="product__arrows">
                     <button class="product__arrow arrow--left" id="product__arrow-left">
@@ -279,7 +279,7 @@
                 </ul>
             </div>
         </section>
-        <section class="team section" id="team">
+        <section class="team section" id="team" data-fixedMenu-color="black">
             <div class="container">
                 <h2 class="title">Команда</h2>
                 <ul class="team__inner">
@@ -417,7 +417,7 @@
                 </ul>
             </div>
         </section>
-        <section class="accordion section" id="accordion">
+        <section class="accordion section" id="accordion" data-fixedMenu-color="white">
             <div class="accordion__container">
                 <div class="accordion__slide-title-container">
                     <h2 class="accordion__slide-title title">Меню</h2>
@@ -425,9 +425,9 @@
                 <div class="accordion__slide-tabs">
                     <div class="sizes">
                         <ul class="sizes__list">
-                            <li class="sizes__item sizes__item-one">
-                                <div class="sizes__item-name">
-                                    <span class="sizes__item-title">Батночики с молоком</span>
+                            <li class="sizes__item">
+                                <div class="sizes__item-name sizes__item-one">
+                                    <span class="sizes__item-title title">Батночики с молоком</span>
                                 </div>
                                 <div class="sizes__item-desc">
                                     <p>
@@ -439,9 +439,9 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="sizes__item sizes__item-two">
-                                <div class="sizes__item-name">
-                                    <span class="sizes__item-title">С мёдом и фруктами</span>
+                            <li class="sizes__item">
+                                <div class="sizes__item-name sizes__item-two">
+                                    <span class="sizes__item-title title">С мёдом и фруктами</span>
                                 </div>
                                 <div class="sizes__item-desc">
                                     <p>
@@ -453,9 +453,9 @@
                                     </p>
                                 </div>
                             </li>
-                            <li class="sizes__item sizes__item-three">
-                                <div class="sizes__item-name">
-                                    <span class="sizes__item-title">Дикие ягоды</span>
+                            <li class="sizes__item">
+                                <div class="sizes__item-name sizes__item-three">
+                                    <span class="sizes__item-title title">Дикие ягоды</span>
                                 </div>
                                 <div class="sizes__item-desc">
                                     <p>
@@ -472,7 +472,7 @@
                 </div>
             </div>
         </section>
-        <section class="reviews section section">
+        <section class="reviews section section" data-fixedMenu-color="white">
             <div class="container">
                 <h2 class="title">Отзывы</h2>
                 <div class="reviews__inner">
@@ -553,8 +553,8 @@
                 </div> 
             </div>
         </section>
-        <section class="video section">
-            <div class="container">
+        <section class="video section" data-fixedMenu-color="white">
+            <div class="container video__container">
                 <h2 class="video__title title">Как мы работаем</h2>
                 <div class="player__container">
                     <div class="player">
@@ -576,7 +576,7 @@
                 </div>
             </div>
         </section>
-        <section class="delivery section">
+        <section class="delivery section" data-fixedMenu-color="white">
             <div class="container">
                 <h2 class="title delivery__title">закажите доставку</h2>
                 <form class="form">
@@ -652,6 +652,55 @@
                 </form>
             </div>
         </section>
+        <section class="map section" data-fixedMenu-color="black">
+            <div class="map__container"id="map"></div>
+        </section>
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__content">
+                    <div class="footer__adress">Москва, ул.Новый Арбат, д.31/12</div>
+                    <div class="footer__contact">
+                        <a class="tel footer__tel" href="tel:88009039090">
+                            <svg class="tel-icon footer__tel-icon">
+                                <use xlink:href="./img/sprite.svg#phone"></use>
+                            </svg>
+                            8 800 903 90 90</a>
+                    </div>
+                </div>
+                <div class="footer__social">
+                    <ul class="footer__social-list">
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <svg class="footer__vk" width="20" height="20" viewBox="0 0 20 20">
+                                    <use xlink:href="./img/sprite.svg#footer-vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <svg class="footer__fb" width="20" height="20" viewBox="0 0 20 20">
+                                    <use xlink:href="./img/sprite.svg#footer-fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <svg class="footer__inst" width="20" height="20" viewBox="0 0 20 20">
+                                    <use xlink:href="./img/sprite.svg#footer-inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__social-item">
+                            <a class="footer__social-link" href="#">
+                                <svg class="footer__tw" width="20" height="20" viewBox="0 0 20 20">
+                                    <use xlink:href="./img/sprite.svg#footer-tw"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
         <div class="modal" id="modal">
             <div class="modal__container">
                 <div class="modal__title"></div>
@@ -664,7 +713,7 @@
             </div>
         </div>
     </div>
-    <nav class="fixed-menu">
+    <nav class="fixed-menu fixed-menu">
         <ul class="fixed-menu__list">
             <li class="fixed-menu__item">
                 <a href="" class="fixed-menu__link"></a>
@@ -706,6 +755,10 @@
     <script src="./JS/player.js"></script>
     <script src="./JS/team.js"></script>
     <script src="./JS/scroll.js"></script>
+    <script src="./JS/accordions.js"></script>
+    <script src="./JS/OnePageScroll.js"></script>
     <script src="./JS/app.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="./JS/map.js"></script>
 </body>
 </html>
