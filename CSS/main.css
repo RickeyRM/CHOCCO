@@ -57,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit; }
 
 html {
+  height: 100%;
   font-size: 18px; }
   @media screen and (max-width: 768px) {
     html {
@@ -80,7 +81,13 @@ body {
   height: 39px; }
 
 .wrapper {
-  transition: transform 0.5s ease-in-out; }
+  overflow: hidden;
+  height: 100%; }
+
+.maincontent {
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform; }
 
 .btn {
   font-size: 16px;
@@ -144,13 +151,13 @@ body {
   background-color: inherit;
   cursor: pointer;
   display: none; }
-  .active .burger__line {
+  .burger--active .burger__line {
     background-color: inherit;
     transition: background-color 0.2s linear; }
-    .active .burger__line::before {
+    .burger--active .burger__line::before {
       transform: rotate(-45deg);
       top: -1px; }
-    .active .burger__line::after {
+    .burger--active .burger__line::after {
       transform: rotate(45deg);
       top: 0; }
   @media screen and (max-width: 768px) {
@@ -530,6 +537,7 @@ body {
   .fixed-menu__item {
     margin-bottom: 0.2777777778rem; }
     .fixed-menu__item--active .fixed-menu__link {
+      transition: border 0.5s linear;
       border: 0.0555555556rem solid #fff; }
   .fixed-menu__link {
     width: 1.1111111111rem;
@@ -548,7 +556,8 @@ body {
       background-color: #fff;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      transition: background-color 0.5s linear; }
   .fixed-menu.fixed-menu--shadowed .fixed-menu__item--active .fixed-menu__link {
     border: 0.0555555556rem solid #292929; }
   .fixed-menu.fixed-menu--shadowed .fixed-menu__link::before {
@@ -987,7 +996,7 @@ body {
     align-items: flex-start;
     justify-content: space-between; }
   .accordion__slide-title-container {
-    max-width: 20%;
+    max-width: 0.00001%;
     height: 100%; }
   .accordion__slide-title {
     margin-top: 110px;
@@ -1003,6 +1012,9 @@ body {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end; }
+    @media screen and (max-width: 768px) {
+      .accordion__slide-tabs {
+        max-width: 100%; } }
 
 .sizes {
   height: 100%; }
@@ -1016,9 +1028,12 @@ body {
     height: 100%;
     cursor: pointer;
     display: flex; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
       .sizes__item {
         min-width: 5rem; } }
+    @media screen and (max-width: 480px) {
+      .sizes__item {
+        min-width: 3.3333333333rem; } }
     .sizes__item-one {
       background: url(../img/accordion/item-bg-1.jpg) center center/cover no-repeat; }
     .sizes__item-two {
@@ -1030,9 +1045,12 @@ body {
       height: 100%;
       display: flex;
       padding-bottom: 40px; }
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 768px) {
         .sizes__item-name {
           min-width: 5rem; } }
+      @media screen and (max-width: 480px) {
+        .sizes__item-name {
+          min-width: 3.3333333333rem; } }
     .sizes__item-title {
       white-space: nowrap;
       color: #fff;
@@ -1042,6 +1060,9 @@ body {
       line-height: 96px;
       text-align: left;
       text-transform: inherit; }
+      @media screen and (max-width: 768px) {
+        .sizes__item-title {
+          line-height: 5.3333333333rem; } }
       @media screen and (max-width: 480px) {
         .sizes__item-title {
           line-height: 5.3333333333rem; } }
@@ -1051,9 +1072,13 @@ body {
       visibility: hidden;
       transition: all 0.5s ease-in-out; }
       .sizes__item-desc.active {
-        width: 524px;
+        width: 40vw;
         visibility: visible;
         padding: 30px 80px 0 20px; }
+        @media screen and (max-width: 480px) {
+          .sizes__item-desc.active {
+            width: 38vw;
+            padding: 30px 10px 0 10px; } }
 
 .player {
   max-width: 662px;
@@ -1074,6 +1099,8 @@ body {
     background: url(../img/player/bg.jpg) center center contain no-repeat; }
     .player__container.active {
       background: none; }
+  .player__wrapper {
+    height: 100%; }
   .player__controls {
     height: 34px;
     display: flex;

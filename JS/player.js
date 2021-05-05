@@ -81,8 +81,8 @@ switch(e.data){
 
 function onYouTubeIframeAPIReady() {
  player = new YT.Player("yt-player", {
-   height: playerHeight,
-   width: playerWidth,
+   height: '100%',
+   width: '100%',
    videoId: "LXb3EKWsInQ",
    events: {
         onReady: onPlayerReady,

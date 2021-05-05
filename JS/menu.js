@@ -6,7 +6,7 @@ $(document).ready(function(){
     
         menuBtn.addEventListener('click', function () {
             menu.classList.toggle('menu--active');
-            menuBtn.classList.toggle('active');
+            menuBtn.classList.toggle('burger--active');
     
             if (menu.classList.contains('menu--active')){
                 document.querySelector('.wrapper').style.overflow =  `hidden`;
