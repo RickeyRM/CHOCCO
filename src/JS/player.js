@@ -1,3 +1,4 @@
+
 let player;
 
 const playerContainer = $('.player__start');

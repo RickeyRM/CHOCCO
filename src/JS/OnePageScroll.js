@@ -1,3 +1,4 @@
+
 const wrapper = $('.maincontent');
 const sections = $('.section');
 const fixedMenu = $('.fixed-menu');

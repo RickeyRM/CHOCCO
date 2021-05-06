@@ -1,5 +1,6 @@
+// ;(function(){
 
-
+// })
 $('.sizes__item').click(e =>{
     const itemName = $(e.currentTarget);
     const desc = itemName.find('.sizes__item-desc');
