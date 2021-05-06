@@ -1,0 +1,23 @@
+{
+  "name": "chocco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickeyRM/CHOCCO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RickeyRM/CHOCCO/issues"
+  },
+  "homepage": "https://github.com/RickeyRM/CHOCCO#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
