@@ -29,6 +29,7 @@ task('copy:html', () =>{
 const styles = [
     'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
+    // 'node_modules/fancybox/dist/css/jquery.fancybox.css',
     'src/SCSS/main.scss'
 ];
 task('styles', () =>{
@@ -52,6 +53,7 @@ const scripts = [
     'node_modules/jquery/dist/jquery.js',
     'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
+    'node_modules/fancybox/dist/js/jquery.fancybox.js',
     'src/JS/*.js'
 ];
 task('scripts', () =>{
