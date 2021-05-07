@@ -28,6 +28,7 @@ task('copy:html', () =>{
 
 const styles = [
     'node_modules/normalize.css/normalize.css',
+    'node_modules/slick-carousel/slick/slick.css',
     'src/SCSS/main.scss'
 ];
 task('styles', () =>{
@@ -49,17 +50,18 @@ task('styles', () =>{
 });
 const scripts = [
     'node_modules/jquery/dist/jquery.js',
-    'src/JS/*.js',
-
+    'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
+    'node_modules/slick-carousel/slick/slick.min.js',
+    'src/JS/*.js'
 ];
 task('scripts', () =>{
     return src(scripts)
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js'))
-    .pipe(babel({
-        presets: ['@babel/env']
-    }))
-    .pipe(uglify())
+    // .pipe(babel({
+    //     presets: ['@babel/env']
+    // }))
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(dest('dist'))
     .pipe(reload({stream: true}))

@@ -101,23 +101,6 @@ $('[data-scroll-to]').click(e =>{
 
     performTransition(reqSection.index())
 });
-$('body').swipe( {
-
-    swipe:function(event, direction) {
-        alert(direction)
-        const scroller = viewportScroller();
-        let scrollDirection = '';
-      
-      if (direction === 'up'){
-        scrollDirection = 'next';
-      }
-      if (direction === 'down'){
-        scrollDirection = 'prev';
-      }
-
-      scroller[scrollDirection]();
-    }
-});
 
 
 
