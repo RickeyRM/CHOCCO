@@ -51,9 +51,9 @@ task('styles', () =>{
 });
 const scripts = [
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/jquery-touchswipe/jquery.touchSwipe.min.js',
     'node_modules/slick-carousel/slick/slick.min.js',
-    'node_modules/fancybox/dist/js/jquery.fancybox.js',
+    // 'node_modules/fancybox/dist/js/jquery.fancybox.js',
+    'node_modules/jquery-touchswipe/jquery.touchSwipe.js',
     'src/JS/*.js'
 ];
 task('scripts', () =>{

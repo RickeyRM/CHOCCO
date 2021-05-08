@@ -24,7 +24,7 @@ $(document).ready(function () {
                 xhr.addEventListener('load', () =>{
                     $.fancybox.open({
                         src: "#modal",
-                        // type: "inline"
+                        type: "inline"
                     });
     
                     if(xhr.response.status){
@@ -36,6 +36,11 @@ $(document).ready(function () {
                     }
                     
                 });
+                $('.btn__modal-js').click( e =>{
+                    e.preventDefault();
+            
+                    $.fancybox.close();
+                }); 
             }
     });
     
@@ -54,11 +59,11 @@ $(document).ready(function () {
 			valid = false;
 		}
 		 
-		if (!validateField(form.elements.houseNum)) {
+		if (!validateField(form.elements.house)) {
 			valid = false;
 		}
 		 
-		if (!validateField(form.elements.apartmant)) {
+		if (!validateField(form.elements.flat)) {
 			valid = false;
 		}
 		if (!validateField(form.elements.comment)) {
@@ -76,11 +81,6 @@ $(document).ready(function () {
         return true;  
         
     }
-    $('.btn__modal-js').click( e =>{
-        e.preventDefault();
-
-        $.fancybox.close();
-    }); 
     
 });
 // function validateField(field) {
