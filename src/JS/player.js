@@ -1,16 +1,23 @@
-
 let player;
 
 const playerContainer = $('.player__start');
-
-let playerWidth = $('.player').width();
-let playerHeight = $('.player').height();
+const playerBg = $('.player__splach');
 
 let eventInit = () =>{
     $('.player__start').click(e =>{
         e.preventDefault();
 
         const btn = $(e.currentTarget);
+        if(playerContainer.hasClass('paused')){
+            player.pauseVideo();
+        } else {
+            player.playVideo();
+        }
+    });
+    $('.player__splach').click(e =>{
+        e.preventDefault();
+
+        const bg = $(e.currentTarget);
         if(playerContainer.hasClass('paused')){
             player.pauseVideo();
         } else {
@@ -70,10 +77,10 @@ const onPlayerStateChange = (e) =>{
 switch(e.data){
     case 1:
         playerContainer.addClass('paused');
-        playerContainer.addClass('active');
+        playerBg.addClass('active');
         break;
     case 2:
-        playerContainer.removeClass('active');
+        playerBg.removeClass('active');
         playerContainer.removeClass('paused');
         break;
 }

@@ -38,6 +38,7 @@
         margin-right: rem(27px);
         white-space: nowrap;
         padding-bottom: 10px;
+        display: inline-block;
         &:last-child{
             margin-right: 0;
         }
@@ -46,5 +47,25 @@
             margin-right: 0;
             margin-bottom: 20px;
         }
+    }
+    &__item-link{
+        display: inline-block;
+        position: relative;
+        &::after{
+            content: "";
+            display: block;
+            margin-top: 3px;
+            width: 0;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            
+        }
+        &:hover:after{
+            width: 100%;
+            transition: width .2s ease-in-out;
+            }
     }
 }

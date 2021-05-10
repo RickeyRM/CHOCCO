@@ -10,11 +10,22 @@
 .product__btn{
     background-color: #497870;
     color: #fff;
+    transition: all 0.2s linear;
+    &:hover{
+        color: #497870;
+        background-color: #fff;
+        border: 1px solid #497870;  
+    }
 }
 
 .initial__btn{
     background-color: #fff;
     color: #365A49;
+    transition: all 0.2s linear;
+    &:hover{
+        color: #fff;
+        background-color: #497870;
+    }
     @include tablet{
         text-align: center;
     }

@@ -38,6 +38,8 @@
         align-items: flex-end;
         justify-content: flex-end;
         height: 100%;
+        width: 100%;
+        position: relative;
     }
     &__item{
         min-width: 100px;
@@ -69,10 +71,12 @@
             display: flex;
             padding-bottom: 40px;
             @include tablet {
+                position: absolute;
                 min-width: rem(90px);
                 max-width: rem(90px);
             }
             @include mobile {
+                position: absolute;
                 min-width: rem(70px);
                 max-width: rem(70px);
             }
@@ -101,13 +105,14 @@
             &.active{
                 width: 40vw;
                 visibility: visible;
-                padding: 30px 80px 0 20px;
+                padding: 30px 80px 0 50px;
                 @include tablet{
-                    width: 53vw;
-                    padding: 30px 10px 0 10px;
+                    width: 100vw;
+                    padding: 30px 10px 0 100px;
                 }
                 @include mobile{
-                    width: 48vw;
+                    width: 100vw;
+                    padding: 30px 10px 0 70px;
                 }
             }
         }

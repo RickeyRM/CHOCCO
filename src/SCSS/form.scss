@@ -79,7 +79,12 @@
     }
     &__btn{
         background-color: #2E4E3F;
-        color: #fff; 
+        color: #fff;
+        transition: all 0.2s linear;
+        &:hover{
+            background-color: #fff;
+            color: #2E4E3F;
+        }
     }
     &__btn-clean{
         line-height: rem(22px);
